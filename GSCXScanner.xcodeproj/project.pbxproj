@@ -53,37 +53,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		616526092208F14C00CBC788 /* PBXContainerItemProxy */ = {
+		8FF3A29C22E283AF00A48760 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 616526022208F14C00CBC788 /* GTXiLib.xcodeproj */;
+			containerPortal = 8FF3A29522E283AF00A48760 /* GTXiLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 613C3F41204A09E8007D44A8;
 			remoteInfo = GTXiLib;
 		};
-		6165260B2208F14C00CBC788 /* PBXContainerItemProxy */ = {
+		8FF3A29E22E283AF00A48760 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 616526022208F14C00CBC788 /* GTXiLib.xcodeproj */;
+			containerPortal = 8FF3A29522E283AF00A48760 /* GTXiLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6115E786204F5BA2003E32F9;
 			remoteInfo = GTXiUnitTests;
 		};
-		6165260D2208F14C00CBC788 /* PBXContainerItemProxy */ = {
+		8FF3A2A022E283AF00A48760 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 616526022208F14C00CBC788 /* GTXiLib.xcodeproj */;
+			containerPortal = 8FF3A29522E283AF00A48760 /* GTXiLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 61284DAD211E3F8300F8FF29;
 			remoteInfo = TestApp;
 		};
-		6165260F2208F14C00CBC788 /* PBXContainerItemProxy */ = {
+		8FF3A2A222E283AF00A48760 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 616526022208F14C00CBC788 /* GTXiLib.xcodeproj */;
+			containerPortal = 8FF3A29522E283AF00A48760 /* GTXiLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 61284DE0211E442700F8FF29;
 			remoteInfo = FunctionalTests;
 		};
-		616526112208F15500CBC788 /* PBXContainerItemProxy */ = {
+		8FF3A2A422E283DA00A48760 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 616526022208F14C00CBC788 /* GTXiLib.xcodeproj */;
+			containerPortal = 8FF3A29522E283AF00A48760 /* GTXiLib.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 613C3F40204A09E7007D44A8;
 			remoteInfo = GTXiLib;
@@ -136,7 +136,7 @@
 		616525DA2208F12E00CBC788 /* GSCXScannerResultDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSCXScannerResultDetailViewController.m; path = Sources/GSCXScannerResultDetailViewController.m; sourceTree = SOURCE_ROOT; };
 		616525DB2208F12E00CBC788 /* GSCXScannerResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSCXScannerResultTableViewController.h; path = Sources/GSCXScannerResultTableViewController.h; sourceTree = SOURCE_ROOT; };
 		616525DC2208F12E00CBC788 /* GSCXWindowOverlayPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSCXWindowOverlayPair.h; path = Sources/GSCXWindowOverlayPair.h; sourceTree = SOURCE_ROOT; };
-		616526022208F14C00CBC788 /* GTXiLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTXiLib.xcodeproj; path = ../GTXiLib/GTXiLib.xcodeproj; sourceTree = "<group>"; };
+		8FF3A29522E283AF00A48760 /* GTXiLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTXiLib.xcodeproj; path = ../GTXiLib/GTXiLib.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +153,7 @@
 		616525A12208F0EE00CBC788 = {
 			isa = PBXGroup;
 			children = (
-				616526022208F14C00CBC788 /* GTXiLib.xcodeproj */,
+				8FF3A29522E283AF00A48760 /* GTXiLib.xcodeproj */,
 				616525AD2208F0EE00CBC788 /* GSCXScanner */,
 				616525AC2208F0EE00CBC788 /* Products */,
 			);
@@ -218,13 +218,13 @@
 			path = GSCXScanner;
 			sourceTree = "<group>";
 		};
-		616526032208F14C00CBC788 /* Products */ = {
+		8FF3A29622E283AF00A48760 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6165260A2208F14C00CBC788 /* GTXiLib.framework */,
-				6165260C2208F14C00CBC788 /* GTXiUnitTests.xctest */,
-				6165260E2208F14C00CBC788 /* TestApp.app */,
-				616526102208F14C00CBC788 /* FunctionalTests.xctest */,
+				8FF3A29D22E283AF00A48760 /* GTXiLib.framework */,
+				8FF3A29F22E283AF00A48760 /* GTXiUnitTests.xctest */,
+				8FF3A2A122E283AF00A48760 /* TestApp.app */,
+				8FF3A2A322E283AF00A48760 /* FunctionalTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				616526122208F15500CBC788 /* PBXTargetDependency */,
+				8FF3A2A522E283DA00A48760 /* PBXTargetDependency */,
 			);
 			name = GSCXScanner;
 			productName = GSCXScanner;
@@ -307,8 +307,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 616526032208F14C00CBC788 /* Products */;
-					ProjectRef = 616526022208F14C00CBC788 /* GTXiLib.xcodeproj */;
+					ProductGroup = 8FF3A29622E283AF00A48760 /* Products */;
+					ProjectRef = 8FF3A29522E283AF00A48760 /* GTXiLib.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -319,32 +319,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6165260A2208F14C00CBC788 /* GTXiLib.framework */ = {
+		8FF3A29D22E283AF00A48760 /* GTXiLib.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = GTXiLib.framework;
-			remoteRef = 616526092208F14C00CBC788 /* PBXContainerItemProxy */;
+			remoteRef = 8FF3A29C22E283AF00A48760 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6165260C2208F14C00CBC788 /* GTXiUnitTests.xctest */ = {
+		8FF3A29F22E283AF00A48760 /* GTXiUnitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = GTXiUnitTests.xctest;
-			remoteRef = 6165260B2208F14C00CBC788 /* PBXContainerItemProxy */;
+			remoteRef = 8FF3A29E22E283AF00A48760 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6165260E2208F14C00CBC788 /* TestApp.app */ = {
+		8FF3A2A122E283AF00A48760 /* TestApp.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = TestApp.app;
-			remoteRef = 6165260D2208F14C00CBC788 /* PBXContainerItemProxy */;
+			remoteRef = 8FF3A2A022E283AF00A48760 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		616526102208F14C00CBC788 /* FunctionalTests.xctest */ = {
+		8FF3A2A322E283AF00A48760 /* FunctionalTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = FunctionalTests.xctest;
-			remoteRef = 6165260F2208F14C00CBC788 /* PBXContainerItemProxy */;
+			remoteRef = 8FF3A2A222E283AF00A48760 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -393,10 +393,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		616526122208F15500CBC788 /* PBXTargetDependency */ = {
+		8FF3A2A522E283DA00A48760 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GTXiLib;
-			targetProxy = 616526112208F15500CBC788 /* PBXContainerItemProxy */;
+			targetProxy = 8FF3A2A422E283DA00A48760 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
