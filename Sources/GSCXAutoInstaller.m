@@ -67,7 +67,19 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation GSCXAutoInstaller
 
 + (void)load {
-    [GSCXAutoInstallerAppListener startListening];
+    BOOL skip_load = false;
+    
+    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
+    if(processInfo && processInfo.environment) {
+        if(processInfo.environment[@"SKIP_GSCXSCANNER"])
+        {
+            skip_load = true;
+        }
+    }
+    
+    if(!skip_load) {
+        [GSCXAutoInstallerAppListener startListening];
+    }
 }
 
 @end
