@@ -68,7 +68,12 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation GSCXAutoInstaller
 
 + (void)load {
+    // TPHA-419:20170722:AB
+    // In case we want to skip the scanner for local test builds via
+    // a build scheme environment variable.
+#ifndef SKIP_GSCXSCANNER
     [GSCXAutoInstallerAppListener startListening];
+#endif
 }
 
 @end
