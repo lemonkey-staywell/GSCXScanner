@@ -35,29 +35,42 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - GSCXAutoInstallerAppListener Implementation
 
 @implementation GSCXAutoInstallerAppListener {
-  UIWindow *_overlayWindow;
+    UIWindow *_overlayWindow;
+    BOOL _overlayIsHidden;
 }
 
 + (instancetype)defaultListener {
-  static dispatch_once_t onceToken;
-  static GSCXAutoInstallerAppListener *defaultInstance;
-  dispatch_once(&onceToken, ^{
-    defaultInstance = [[GSCXAutoInstallerAppListener alloc] init];
-  });
-  return defaultInstance;
+    static dispatch_once_t onceToken;
+    static GSCXAutoInstallerAppListener *defaultInstance;
+    dispatch_once(&onceToken, ^{
+        defaultInstance = [[GSCXAutoInstallerAppListener alloc] init];
+    });
+    return defaultInstance;
 }
 
 + (void)startListening {
-  [[NSNotificationCenter defaultCenter] addObserver:[GSCXAutoInstallerAppListener defaultListener]
-                                           selector:@selector(applicationDidFinishLaunching:)
-                                               name:UIApplicationDidFinishLaunchingNotification
-                                             object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:[GSCXAutoInstallerAppListener defaultListener]
+                                             selector:@selector(applicationDidFinishLaunching:)
+                                                 name:UIApplicationDidFinishLaunchingNotification
+                                               object:nil];
+    
+    // Allow for overlay window (the window containing the "Perform Scan" button)
+    // to be hidden or shown.
+    [[NSNotificationCenter defaultCenter] addObserver:[GSCXAutoInstallerAppListener defaultListener]
+                                             selector:@selector(toggleScannerVisibility:)
+                                                 name:ToggleGSXCScannerVisibilityNotification
+                                               object:nil];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
-  NSAssert(_overlayWindow == nil, @"iOS Scanner was already installed.");
-  // TODO: Also check if scanner was installed using other APIs in GSCXInstaller.
-  _overlayWindow = [GSCXInstaller installScanner];
+    NSAssert(_overlayWindow == nil, @"iOS Scanner was already installed.");
+    // TODO: Also check if scanner was installed using other APIs in GSCXInstaller.
+    _overlayWindow = [GSCXInstaller installScanner];
+}
+
+- (void)toggleScannerVisibility:(NSNotification *)notification {
+    _overlayIsHidden = !_overlayIsHidden;
+    _overlayWindow.hidden = _overlayIsHidden;
 }
 
 @end
@@ -67,7 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation GSCXAutoInstaller
 
 + (void)load {
-  [GSCXAutoInstallerAppListener startListening];
+    [GSCXAutoInstallerAppListener startListening];
 }
 
 @end

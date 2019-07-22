@@ -129,6 +129,11 @@ NSString *const kGSCXPerformScanAccessibilityIdentifier =
   return [self initWithNibName:nil bundle:nil accessibilityEnabled:NO];
 }
 
+// TPHA-419:20190722:AB
+-(BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
 
@@ -146,9 +151,29 @@ NSString *const kGSCXPerformScanAccessibilityIdentifier =
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
 
+  // TPHA-419:20190722:AB
+  [self becomeFirstResponder];
+
   if (!self.accessibilityEnabled && !self.accessibilityNotEnabledAlertShown) {
     [self _presentAccessibilityNotEnabledAlert];
   }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    // TPHA-419:20190722:AB
+    [self resignFirstResponder];
+    
+    [super viewWillDisappear:animated];
+}
+
+// TPHA-419:20190722:AB
+// Listen to shake event and toggle visibility of "Perform Scan" window.
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        [[NSNotificationCenter defaultCenter] postNotificationName:ToggleGSXCScannerVisibilityNotification object:nil];
+    }
 }
 
 - (IBAction)performScanButtonPressed:(id)sender {

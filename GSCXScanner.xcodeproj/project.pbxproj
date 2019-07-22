@@ -35,7 +35,7 @@
 		616525F02208F12E00CBC788 /* GSCXCornerConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 616525CB2208F12D00CBC788 /* GSCXCornerConstraints.m */; };
 		616525F12208F12E00CBC788 /* GSCXWindowOverlayPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 616525CC2208F12D00CBC788 /* GSCXWindowOverlayPair.m */; };
 		616525F22208F12E00CBC788 /* GSCXScannerOverlayViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 616525CD2208F12D00CBC788 /* GSCXScannerOverlayViewController.h */; };
-		616525F32208F12E00CBC788 /* GSCXAutoInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 616525CE2208F12D00CBC788 /* GSCXAutoInstaller.h */; };
+		616525F32208F12E00CBC788 /* GSCXAutoInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 616525CE2208F12D00CBC788 /* GSCXAutoInstaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		616525F42208F12E00CBC788 /* GSCXScannerResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 616525CF2208F12D00CBC788 /* GSCXScannerResult.h */; };
 		616525F52208F12E00CBC788 /* GSCXScannerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 616525D02208F12D00CBC788 /* GSCXScannerResult.m */; };
 		616525F62208F12E00CBC788 /* GSCXInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 616525D12208F12D00CBC788 /* GSCXInstaller.m */; };
