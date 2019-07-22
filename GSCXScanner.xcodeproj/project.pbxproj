@@ -16,7 +16,7 @@
 		616525DD2208F12E00CBC788 /* GSCXWindowOverlayViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 616525B82208F12C00CBC788 /* GSCXWindowOverlayViewController.h */; };
 		616525DE2208F12E00CBC788 /* GSCXScannerIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 616525B92208F12C00CBC788 /* GSCXScannerIssue.m */; };
 		616525DF2208F12E00CBC788 /* GSCXScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 616525BA2208F12C00CBC788 /* GSCXScanner.m */; };
-		616525E02208F12E00CBC788 /* GSCXScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 616525BB2208F12C00CBC788 /* GSCXScanner.h */; };
+		616525E02208F12E00CBC788 /* GSCXScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 616525BB2208F12C00CBC788 /* GSCXScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		616525E12208F12E00CBC788 /* GSCXScannerResultTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 616525BC2208F12C00CBC788 /* GSCXScannerResultTableViewController.xib */; };
 		616525E22208F12E00CBC788 /* GSCXAutoInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 616525BD2208F12C00CBC788 /* GSCXAutoInstaller.m */; };
 		616525E32208F12E00CBC788 /* GSCXScannerScreenshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 616525BE2208F12C00CBC788 /* GSCXScannerScreenshotViewController.xib */; };

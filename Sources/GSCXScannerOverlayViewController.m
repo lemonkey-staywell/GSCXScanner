@@ -168,7 +168,7 @@ NSString *const kGSCXPerformScanAccessibilityIdentifier =
 
 // TPHA-419:20190722:AB
 // Listen to shake event and toggle visibility of "Perform Scan" window.
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event
 {
     if (motion == UIEventSubtypeMotionShake)
     {
