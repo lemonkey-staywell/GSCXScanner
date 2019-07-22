@@ -167,12 +167,20 @@ NSString *const kGSCXPerformScanAccessibilityIdentifier =
 }
 
 // TPHA-419:20190722:AB
-// Listen to shake event and toggle visibility of "Perform Scan" window.
+// Listen to shake event and toggle visibility of "Perform Scan" button.
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event
 {
     if (motion == UIEventSubtypeMotionShake)
     {
-        [[NSNotificationCenter defaultCenter] postNotificationName:ToggleGSXCScannerVisibilityNotification object:nil];
+        self.performScanButton.hidden = !self.performScanButton.hidden;
+        
+        if(self.performScanButton.hidden) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"GSCXScanner" message:[NSString stringWithFormat:@"Perform Scan is now hidden. Shake again to bring it back."] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"GSCXSCanner" style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:cancelAction];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+        }
     }
 }
 

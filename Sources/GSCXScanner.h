@@ -20,7 +20,6 @@
 #import "GSCXAnalytics.h"
 #import "GSCXScannerDelegate.h"
 #import "GSCXScannerResult.h"
-#import "GSCXAutoInstaller.h"
 
 // All GTXiLib imports are grouped here to help with OSS release script which replaces the below
 // with GTXiLib framework import.

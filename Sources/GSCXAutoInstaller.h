@@ -18,8 +18,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * const ToggleGSXCScannerVisibilityNotification = @"ToggleGSXCScannerVisibilityNotification";
-
 /**
  *  Including this class in Objective-C runtime will cause the scanner to be installed when the app
  *  is launched.
