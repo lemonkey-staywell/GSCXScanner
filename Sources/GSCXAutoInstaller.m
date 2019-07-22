@@ -71,26 +71,26 @@ NS_ASSUME_NONNULL_BEGIN
     // TPHA-419:20170722:AB
     // In case we want to skip the scanner for local test builds via
     
-    BOOL skip_load = false;
-    
-    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
-    if(processInfo) {
-        NSArray *processInfoArguments = processInfo.arguments;
-        if(processInfoArguments.count > 0)
-        {
-            if([processInfoArguments containsObject:@"SKIP_GSCXSCANNER"]) {
-                skip_load = true;
-            }
-        }
-    }
-    
-    if(!skip_load) {
-        NSLog(@"Loading GSCXScanner (GSCXAutoInstaller.m +load)");
-
-        [GSCXAutoInstallerAppListener startListening];
-    } else {
-        NSLog(@"Skipping loading of GSCXScanner (GSCXAutoInstaller.m +load)");
-    }
+//    BOOL skip_load = false;
+//
+//    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
+//    if(processInfo) {
+//        NSArray *processInfoArguments = processInfo.arguments;
+//        if(processInfoArguments.count > 0)
+//        {
+//            if([processInfoArguments containsObject:@"SKIP_GSCXSCANNER"]) {
+//                skip_load = true;
+//            }
+//        }
+//    }
+//
+//    if(!skip_load) {
+//        NSLog(@"Loading GSCXScanner (GSCXAutoInstaller.m +load)");
+//
+//        [GSCXAutoInstallerAppListener startListening];
+//    } else {
+//        NSLog(@"Skipping loading of GSCXScanner (GSCXAutoInstaller.m +load)");
+//    }
 }
 
 @end
